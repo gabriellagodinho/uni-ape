@@ -1,0 +1,43 @@
+<ion-content>
+  <!-- Barra de pesquisa com filtros -->
+  <div class="search-container">
+    <ion-item lines="none" class="search-bar">
+      <ion-input [(ngModel)]="cityQuery" placeholder="São Bernardo do Campo, SP, Brasil"></ion-input>
+      <ion-button fill="clear" class="filter-button">
+        <ion-icon name="options-outline"></ion-icon>
+      </ion-button>
+    </ion-item>
+  </div>
+
+  <!-- Resultados encontrados -->
+  <div class="results-header" *ngIf="filteredImoveis.length > 0">
+    <p class="result-count">{{ filteredImoveis.length }} imóveis na região e arredores</p>
+    <ion-button fill="clear" size="small" class="sort-button">
+      <ion-icon name="swap-vertical-outline"></ion-icon>
+      Mais relevantes
+    </ion-button>
+  </div>
+
+  <!-- Listagem de imóveis -->
+  <ion-list *ngIf="filteredImoveis.length > 0">
+    <ion-card *ngFor="let property of filteredImoveis">
+      <img [src]="property.image" alt="Imagem do imóvel" class="property-image"/>
+      <ion-card-header>
+        <ion-card-subtitle>{{ property.type }}</ion-card-subtitle>
+        <ion-card-title>R$ {{ property.price | number }} total</ion-card-title>
+        <p>R$ {{ property.rent | number }} aluguel</p>
+        <p>{{ property.size }}m² · {{ property.rooms }} quartos · {{ property.parking }} vagas</p>
+        <p>{{ property.address }}</p>
+      </ion-card-header>
+      <ion-card-content>
+        <ion-chip color="primary" *ngIf="property.comingSoon">Anúncio novo</ion-chip>
+        <ion-chip color="primary" *ngIf="property.exclusive">Exclusivo</ion-chip>
+      </ion-card-content>
+    </ion-card>
+  </ion-list>
+
+  <!-- Caso não encontre resultados -->
+  <div *ngIf="filteredImoveis.length === 0 && searchMade">
+    <p>Nenhum imóvel encontrado.</p>
+  </div>
+</ion-content>

@@ -1,0 +1,169 @@
+/*
+ * App Global CSS
+ * ----------------------------------------------------------------------------
+ * Put style rules here that you want to apply globally. These styles are for
+ * the entire app and not just one component. Additionally, this file can be
+ * used as an entry point to import other CSS/Sass files to be included in the
+ * output CSS.
+ * For more information on global stylesheets, visit the documentation:
+ * https://ionicframework.com/docs/layout/global-stylesheets
+ */
+
+/* Core CSS required for Ionic components to work properly */
+@import "@ionic/angular/css/core.css";
+
+/* Basic CSS for apps built with Ionic */
+@import "@ionic/angular/css/normalize.css";
+@import "@ionic/angular/css/structure.css";
+@import "@ionic/angular/css/typography.css";
+@import "@ionic/angular/css/display.css";
+
+/* Optional CSS utils that can be commented out */
+@import "@ionic/angular/css/padding.css";
+@import "@ionic/angular/css/float-elements.css";
+@import "@ionic/angular/css/text-alignment.css";
+@import "@ionic/angular/css/text-transformation.css";
+@import "@ionic/angular/css/flex-utils.css";
+
+
+:root {
+    --primary-color: #43256d; // Azul principal
+    --secondary-color: #b86517; // Azul claro
+    --text-color: #000000; // Cor do texto principal
+    --background-color: #ffffff; // Cor de fundo branca
+    --border-color: #d7d8da; // Cor da borda para componentes
+    --hover-color: #f0f0f0; // Cor de fundo ao passar o mouse
+    --icon-color: #43256d; // Cor dos ícones
+  }
+  
+/* Container Principal */
+.container {
+    background-color: var(--background-color);
+    color: var(--text-color);
+    padding: 20px;
+  }
+  
+  /* Botão Padrão */
+  ion-button {
+    --background: var(--primary-color);
+    --color: #fff;
+    width: 100%;
+    border-radius: 10px;
+    text-align: center;
+    padding: 10px;
+  }
+  
+  /* Cabeçalhos */
+  ion-header, ion-title {
+    color: var(--text-color);
+    font-size: 20px;
+    font-weight: bold;
+    text-align: left;
+  }
+  
+  /* Ícones */
+  ion-icon {
+    color: var(--icon-color);
+    font-size: 28px;
+  }
+  
+  /* Cards */
+  ion-card {
+    background-color: var(--background-color);
+    border: 1px solid var(--border-color);
+    border-radius: 10px;
+  }
+  
+  ion-card-content {
+    font-size: 14px;
+    color: #7a7a7a;
+  }
+  
+  ion-item {
+    --inner-padding-end: 10px;
+    font-size: 1.1em;
+  }
+  
+  ion-card:hover {
+    background-color: var(--hover-color);
+  }
+  
+  /* Tab Bar */
+  ion-tab-bar {
+    --background: var(--background-color);
+    --color: var(--text-color);
+    border-top: 1px solid var(--border-color);
+  }
+  
+  ion-tab-button {
+    --color-selected: var(--secondary-color);
+  }
+  
+  ion-tab-button[aria-selected=true] ion-icon {
+    color: var(--secondary-color);
+    font-weight: bold;
+  }
+  
+  /* Notificações */
+.notification-banner {
+    background-color: var(--secondary-color);
+    color: #fff;
+    padding: 10px;
+    text-align: center;
+    font-size: 14px;
+  }
+  
+  .notificacoes-desativadas {
+    background-color: #f8d7da;
+    padding: 15px;
+    border-radius: 10px;
+    margin: 20px 0;
+    text-align: center;
+  }
+  
+  .notificacoes-desativadas ion-label {
+    color: #721c24;
+    font-weight: bold;
+  }
+  
+  /* Segmento */
+  ion-segment {
+    background-color: var(--background-color);
+    border: 1px solid var(--border-color);
+    border-radius: 10px;
+    margin-bottom: 20px;
+  }
+  
+  ion-segment-button {
+    --color-checked: var(--secondary-color);
+    --background-checked: var(--hover-color);
+    border-radius: 5px;
+  }
+
+  .conversation-item {
+    display: flex;
+    align-items: center;
+    background-color: #f9f9f9;
+    border: 1px solid var(--border-color);
+    border-radius: 10px;
+    padding: 15px;
+    transition: background-color 0.3s ease;
+  }
+  
+  .conversation-item:hover {
+    background-color: var(--hover-color);
+  }
+  
+  .conversation-icon {
+    background-color: #e1e8f6;
+    padding: 10px;
+    border-radius: 50%;
+    margin-right: 15px;
+  }
+  
+  .conversation-text h3 {
+    font-size: 16px;
+    font-weight: bold;
+    color: var(--text-color);
+  }
+  

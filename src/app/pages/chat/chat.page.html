@@ -1,0 +1,68 @@
+<ion-content>
+  <!-- Cabeçalho -->
+  <div class="header-content">
+    <h1>Mensagens</h1>
+  </div>
+
+  <!-- Segmento de Navegação -->
+  <ion-segment value="conversas" (ionChange)="segmentChanged($event)">
+    <ion-segment-button value="conversas">
+      <ion-label>Conversas</ion-label>
+    </ion-segment-button>
+    <ion-segment-button value="notificacoes">
+      <ion-label>Notificações</ion-label>
+    </ion-segment-button>
+  </ion-segment>
+
+  <!-- Mensagem de Notificações Desativadas -->
+  <div class="notificacoes-desativadas" *ngIf="segmentValue === 'notificacoes'">
+    <ion-label color="primary">Notificações desabilitadas. Toque para ativar</ion-label>
+  </div>
+
+  <!-- Grid de Opções -->
+  <ion-grid>
+    <ion-row class="ion-justify-content-center">
+      <ion-col size="6" class="ion-text-center">
+        <ion-card button (click)="navigateToChat('chat-corretores')">
+          <ion-card-content>
+            <ion-icon name="briefcase-outline" slot="start"></ion-icon>
+            <ion-label>Com corretores</ion-label>
+            <p>Fale sobre visitas e tire suas dúvidas</p>
+          </ion-card-content>
+        </ion-card>
+      </ion-col>
+
+      <ion-col size="6" class="ion-text-center">
+        <ion-card button (click)="navigateToChat('chat-inquilino')">
+          <ion-card-content>
+            <ion-icon name="person-outline" slot="start"></ion-icon>
+            <ion-label>Com seu inquilino</ion-label>
+            <p>Negocie acordos, melhorias e mais</p>
+          </ion-card-content>
+        </ion-card>
+      </ion-col>
+    </ion-row>
+
+    <ion-row class="ion-justify-content-center">
+      <ion-col size="6" class="ion-text-center">
+        <ion-card button (click)="navigateToChat('chat-proprietario')">
+          <ion-card-content>
+            <ion-icon name="home-outline" slot="start"></ion-icon>
+            <ion-label>Com o proprietário</ion-label>
+            <p>Negocie acordos, melhorias e mais</p>
+          </ion-card-content>
+        </ion-card>
+      </ion-col>
+
+      <ion-col size="6" class="ion-text-center">
+        <ion-card button (click)="navigateToChat('ajuda-atendimento')">
+          <ion-card-content>
+            <ion-icon name="help-circle-outline" slot="start"></ion-icon>
+            <ion-label>Ajuda e atendimento</ion-label>
+            <p>Tire dúvidas</p>
+          </ion-card-content>
+        </ion-card>
+      </ion-col>
+    </ion-row>
+  </ion-grid>
+</ion-content>

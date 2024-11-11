@@ -1,0 +1,35 @@
+.logo-button-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    padding: 0 20px;
+  }
+  
+  .logo {
+    width: 500px;
+    max-width: 100%;
+    margin-bottom: 1px;
+  }
+  
+  .custom-button {
+    --background: #ffffff;
+    --border-radius: 12px;
+    --border-color: #e57e1d;
+    --border-width: 2px;
+    color: #522f6e;
+    padding: 10px 20px;
+    font-size: 18px;
+    width: 200px;
+    text-align: center;
+    margin-top: 20px;
+  }
+  
+  .button-image {
+    width: 250px;
+    cursor: pointer;
+    margin-top: 20px;
+  }
+  
+  

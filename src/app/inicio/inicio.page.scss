@@ -1,0 +1,60 @@
+/* Estilos do header */
+.header-content {
+    padding: 16px;
+    background-color: transparent;
+    text-align: left;
+    font-weight: bold;
+  }
+  
+  h1 {
+    font-size: 24px;
+    font-weight: bold;
+    color: #000;
+  }
+  
+  p {
+    font-size: 14px;
+    color: #6c757d;
+  }
+  
+  /* Estilos para a seção de imóveis recomendados */
+  .recommended-section {
+    padding: 16px;
+  }
+  
+  .recommended-section h2 {
+    font-size: 18px;
+    font-weight: bold;
+    margin-bottom: 8px;
+  }
+  
+  .property-card {
+    background-color: #f8f9fa;
+    border-radius: 8px;
+    overflow: hidden;
+    margin-bottom: 16px;
+  }
+  
+  .property-image {
+    width: 100%;
+    height: auto;
+    border-bottom: 1px solid #ddd;
+  }
+  
+  .property-info {
+    padding: 16px;
+  }
+  
+  .property-info h3 {
+    font-size: 16px;
+    font-weight: bold;
+    color: #000;
+    margin-bottom: 4px;
+  }
+  
+  .property-info p {
+    font-size: 14px;
+    color: #6c757d;
+    margin-bottom: 4px;
+  }
+  

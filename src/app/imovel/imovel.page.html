@@ -1,0 +1,25 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>{{ imovel.title || 'Título não disponível' }}</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <ion-slides pager="true" *ngIf="imovel">
+    <ion-slide *ngFor="let image of imovel.images">
+      <img src="{{ image }}" alt="{{ imovel.title || 'Imagem' }}" />
+    </ion-slide>
+  </ion-slides>
+
+  <ion-card *ngIf="imovel">
+    <ion-card-header>
+      <ion-card-title>{{ imovel.title || 'Título não disponível' }}</ion-card-title>
+      <ion-card-subtitle>{{ imovel.address || 'Endereço não disponível' }}</ion-card-subtitle>
+    </ion-card-header>
+    <ion-card-content>
+      <p>{{ imovel.description || 'Descrição não disponível' }}</p>
+      <p>Preço: R$ {{ imovel.price | number:'1.2-2' || 'Preço não disponível' }}</p>
+    </ion-card-content>
+  </ion-card>
+</ion-content>
+

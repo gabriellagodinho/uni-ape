@@ -1,0 +1,80 @@
+.header-content {
+  padding: 16px;
+  font-size: 24px;
+  color: #000;
+  text-align: center; /* Centraliza o texto do cabeçalho */
+}
+
+h1 {
+  font-size: 24px;
+  color: #000;
+}
+
+ion-content {
+  padding: 16px;
+  background-color: #ffffff; // Cor de fundo do conteúdo
+
+  h2 {
+    font-size: 20px;
+    margin-bottom: 8px;
+    color: #343a40; // Cor do texto
+    font-weight: bold; // Negrito para o texto
+    margin-left: 16px; // Margem à esquerda
+  }
+
+  p {
+    font-size: 16px;
+    color: #495057; // Cor do texto
+    margin-bottom: 4px;
+    font-weight: bold; // Negrito para o texto
+    margin-left: 16px; // Margem à esquerda
+  }
+
+  ion-button {
+    margin-top: 16px;
+    color: #ffffff; // Cor do texto do botão
+    border-radius: 8px;
+
+    ion-icon {
+      font-size: 20px; // Ajusta o tamanho do ícone
+    }
+  }
+
+  h3 {
+    margin-top: 24px;
+    font-size: 18px;
+    color: #343a40; // Cor do texto
+    font-weight: bold; // Negrito para o texto
+    margin-left: 16px; // Margem à esquerda
+  }
+}
+
+.image-container {
+  display: flex; // Usando flexbox para centralizar
+  justify-content: center; // Centraliza horizontalmente
+  margin: 16px; // Margem para evitar que encoste nas bordas
+
+  img {
+    max-width: 80%; // Garante que a imagem não ultrapasse o contêiner
+    height: auto; // Mantém a proporção da imagem
+    border-radius: 8px; // Borda arredondada
+  }
+}
+
+.payment-history-container {
+  margin: 16px auto; // Centraliza o contêiner com margem superior e inferior
+  max-width: 600px; // Largura máxima do contêiner
+  background-color: #f8f9fa; // Cor de fundo da caixa
+  padding: 16px; // Espaço interno
+  border-radius: 8px; // Bordas arredondadas
+}
+
+.payment-buttons {
+  display: flex; // Usando flexbox para dispor os botões
+  justify-content: center; // Centraliza os botões
+  flex-direction: row; // Alinha os botões em linha
+}
+
+.icon-white {
+  color: white; // Define a cor do ícone como branca
+}

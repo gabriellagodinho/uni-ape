@@ -1,0 +1,40 @@
+<ion-content>
+  <div>
+    <div class="header-content">
+      <h1>Meu Lar</h1>
+    </div>
+
+    <div class="spacer"></div>
+
+    <h2>Detalhes do Imóvel</h2>
+    
+    <!-- Contêiner para centralizar a imagem -->
+    <div class="image-container">
+      <img src="assets/logo.png" alt="uniape" />
+    </div>
+
+    <p>Endereço: {{ rentalProperty.address }}</p>
+    <p>Valor do Aluguel: R$ {{ rentalProperty.rentAmount }}</p>
+    <p>Vencimento: {{ rentalProperty.dueDate | date:'dd/MM/yyyy' }}</p>
+  </div>
+
+  <div class="payment-buttons">
+    <ion-button (click)="generatePayment('boleto')" style="margin: 8px;">
+      <ion-icon name="document" slot="start" class="icon-white"></ion-icon> Pagar com Boleto
+    </ion-button>
+    <ion-button (click)="generatePayment('pix')" style="margin: 8px;">
+      <ion-icon name="cash" slot="start" class="icon-white"></ion-icon> Pagar com PIX
+    </ion-button>
+  </div>
+
+  <h3>Histórico de Pagamentos</h3>
+  
+  <!-- Contêiner para o histórico de pagamentos -->
+  <div class="payment-history-container">
+    <ion-list>
+      <ion-item *ngFor="let payment of paymentHistory">
+        <p style="margin: 0;">{{ payment.date | date:'dd/MM/yyyy' }} - R$ {{ payment.amount }}</p>
+      </ion-item>
+    </ion-list>
+  </div>
+</ion-content>

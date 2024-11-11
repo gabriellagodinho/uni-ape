@@ -1,0 +1,38 @@
+<ion-content>
+  <!-- Cabeçalho -->
+  <div style="padding: 20px 16px;">
+    <h1 style="font-size: 24px; font-weight: bold;">Menu</h1>
+    <p style="color: #666;">Veja visitas, propostas e aluguéis.</p>
+  </div>
+
+  <!-- Botão "Entrar" -->
+  <div *ngIf="!isLoggedIn" style="padding: 10px 16px;">
+    <button style="display: flex; align-items: center; border: none; background: none; font-size: 16px; color: black;" (click)="login()">
+      <span>Entrar</span>
+      <ion-icon name="arrow-forward-outline" style="font-size: 20px; margin-left: 8px;"></ion-icon>
+    </button>
+  </div>
+
+  <!-- Lista "Para quem está procurando" -->
+  <ion-list lines="none" style="padding: 0 16px;">
+    <ion-list-header>
+      <h3>Para quem está procurando</h3>
+    </ion-list-header>
+
+    <ion-item *ngFor="let page of appPages['Para quem está procurando']" [routerLink]="page.url" style="--padding-start: 0;">
+      <ion-icon [name]="page.icon" slot="start" style="font-size: 20px;"></ion-icon>
+      <ion-label>{{ page.title }}</ion-label>
+    </ion-item>
+  </ion-list>
+
+  <!-- Lista "Para proprietários" -->
+  <ion-list lines="none" style="padding: 0 16px;">
+    <ion-list-header>
+      <h3>Para proprietários</h3>
+    </ion-list-header>
+
+    <ion-item *ngFor="let page of appPages['Para proprietários']" [routerLink]="page.url" style="--padding-start: 0;">
+      <ion-icon [name]="page.icon" slot="start" style="font-size: 20px;"></ion-icon>
+      <ion-label>{{ page.title }}</ion-label>
+    </ion-item>
+  </ion-list>

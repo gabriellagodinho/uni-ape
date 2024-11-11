@@ -1,0 +1,7 @@
+{
+  "name": "UniApê",
+  "integrations": {
+    "capacitor": {}
+  },
+  "type": "angular"
+}

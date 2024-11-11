@@ -1,0 +1,75 @@
+ion-content {
+  --background: #fff;
+}
+
+.header-content {
+  padding: 16px;
+  font-size: 24px;
+  font-weight: bold;
+  color: #000;
+  text-align: center;
+  font-weight: bold;
+}
+
+ion-segment {
+  width: 90%; /* Centraliza o componente e mantém distância das bordas */
+  margin: 0 auto; /* Centraliza */
+  border-radius: 8px;
+  padding: 5px;
+}
+
+ion-segment-button {
+  --indicator-color: #ffffff;
+  font-weight: bold;
+}
+
+ion-segment-button[checked] {
+  color: #000;
+}
+
+.notificacoes-desativadas {
+  background-color: #ffffff;
+  color: #000000;
+  text-align: center;
+  padding: 10px 0;
+  font-size: 14px;
+  margin: 10px 0; /* Espaço adicional acima e abaixo */
+}
+
+ion-card {
+  border-radius: 10px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  transition: box-shadow 0.3s ease;
+  margin: 10px; /* Espaçamento entre os cartões */
+}
+
+ion-card:hover {
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+ion-card-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 20px;
+  text-align: center;
+}
+
+ion-icon {
+  font-size: 32px;
+  color: #b86517;
+  margin-bottom: 10px;
+}
+
+ion-label {
+  font-size: 16px;
+  font-weight: bold;
+  color: #000;
+}
+
+p {
+  margin: 5px 0 0;
+  font-size: 14px;
+  color: #666;
+}
